@@ -1,3 +1,6 @@
+// Copyright (C) 2026 Rui-Hasekura <ruihasekura@gmail.com>
+// SPDX-License-Identifier: GPL-3.0-only
+
 #ifndef LCMP_COMMON_LISTER_H
 #define LCMP_COMMON_LISTER_H
 
@@ -150,7 +153,7 @@ namespace lcmp {
           [&palette_names, &global_counts](uint32_t index) {
             if (index < palette_names.size()) {
               const std::string& name = palette_names[index];
-              if (!name.empty()) {
+              if (!name.empty() && name != "minecraft:air") {
                 ++global_counts[name];
               }
             }

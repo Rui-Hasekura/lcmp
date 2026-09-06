@@ -1,3 +1,6 @@
+// Copyright (C) 2026 Rui-Hasekura <ruihasekura@gmail.com>
+// SPDX-License-Identifier: GPL-3.0-only
+
 #ifndef LCMP_COMMON_READER_H
 #define LCMP_COMMON_READER_H
 
