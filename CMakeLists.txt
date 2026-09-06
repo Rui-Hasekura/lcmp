@@ -22,6 +22,7 @@ find_package(Qt6 REQUIRED COMPONENTS
     Qml
     Quick
 )
+find_package(Qt6 REQUIRED COMPONENTS LinguistTools)
 
 include(FetchContent)
 
@@ -32,6 +33,9 @@ add_library(lcmp STATIC
     src/lcmp_bridge.h
     src/core/lcmp.h
 )
+
+qt_add_translations(lcmp TS_FILES translations/lcmp_zh_CN.ts
+    translations/lcmp_zh_TW.ts)
 add_library(lcmp::Core ALIAS lcmp)
 
 FetchContent_Declare(
@@ -44,6 +48,7 @@ FetchContent_MakeAvailable(abseil-cpp)
 
 set(NBT_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(NBT_USE_ZLIB ON CACHE BOOL "" FORCE)
+set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
 add_subdirectory(3rdParty/zlib EXCLUDE_FROM_ALL)
 set(ZLIB_FOUND TRUE CACHE BOOL "" FORCE)
 set(ZLIB_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/3rdParty/zlib;${CMAKE_CURRENT_BINARY_DIR}/3rdParty/zlib" CACHE PATH "" FORCE)
@@ -90,7 +95,6 @@ install(DIRECTORY src/ 3rdParty/pdqsort/
 
 qt_add_executable(lcmp-gui
     app/main.cpp
-    src/lcmp_bridge.h
 )
 
 qt_add_qml_module(lcmp-gui
@@ -102,8 +106,16 @@ qt_add_qml_module(lcmp-gui
         src/lcmp_bridge.h
 )
 
+set_source_files_properties(qml/Main.qml
+    PROPERTIES
+        QT_RESOURCE_ALIAS "Main.qml"
+)
+
 target_link_libraries(lcmp-gui PRIVATE
     Qt6::Core
+    Qt6::Gui
+    Qt6::Qml
+    Qt6::Quick
     lcmp::Core
 )
 
