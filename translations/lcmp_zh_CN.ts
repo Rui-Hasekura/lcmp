@@ -4,24 +4,24 @@
 <context>
     <name>main</name>
     <message>
-        <source>Litematica Material Comparator</source>
-        <translation type="vanished">Litematica Material Comparator</translation>
+        <source>Litematica Material Delta Comparator</source>
+        <translation>投影材料差异对比器</translation>
     </message>
     <message>
         <source>Base Schematic</source>
         <translation>参照投影文件</translation>
     </message>
     <message>
-        <source>Drop original .litematic here</source>
+        <source>Drop base .litematic here</source>
         <translation>请拖入参照投影文件</translation>
     </message>
     <message>
-        <source>Modified Schematic</source>
-        <translation>对比投影文件</translation>
+        <source>Target Schematic</source>
+        <translation>目标投影文件</translation>
     </message>
     <message>
-        <source>Drop modified .litematic here</source>
-        <translation>请拖入对比投影文件</translation>
+        <source>Drop target .litematic here</source>
+        <translation>请拖入目标投影文件</translation>
     </message>
     <message>
         <source>Comparison Result</source>

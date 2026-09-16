@@ -1,3 +1,5 @@
+pragma Translator: main
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -8,7 +10,7 @@ ApplicationWindow {
     width: 900
     height: 600
     visible: true
-    title: qsTr("Litematica Material Comparator")
+    title: qsTr("Litematica Material Delta Comparator")
 
     readonly property color md3DarkBackground: "#141218"
     readonly property color md3DarkSurfaceVariant: "#211F26"
@@ -71,7 +73,7 @@ ApplicationWindow {
                     }
 
                     Text {
-                        text: window.basePath !== "" ? window.basePath : qsTr("Drop original .litematic here")
+                        text: window.basePath !== "" ? window.basePath : qsTr("Drop base .litematic here")
                         color: window.md3DarkOnSurface
                         opacity: 0.7
                         font.pixelSize: 13
@@ -111,7 +113,7 @@ ApplicationWindow {
                     spacing: 12
 
                     Text {
-                        text: qsTr("Modified Schematic")
+                        text: qsTr("Target Schematic")
                         color: window.md3DarkOnSurface
                         font.pixelSize: 18
                         font.bold: true
@@ -119,7 +121,7 @@ ApplicationWindow {
                     }
 
                     Text {
-                        text: window.modifiedPath !== "" ? window.modifiedPath : qsTr("Drop modified .litematic here")
+                        text: window.modifiedPath !== "" ? window.modifiedPath : qsTr("Drop target .litematic here")
                         color: window.md3DarkOnSurface
                         opacity: 0.7
                         font.pixelSize: 13

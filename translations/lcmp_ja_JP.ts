@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="zh_TW">
+<TS version="2.1" language="ja_JP">
 <context>
     <name>main</name>
     <message>
         <source>Litematica Material Delta Comparator</source>
-        <translation>Litematica 投影物資差異比對器</translation>
+        <translation>Litematica 素材差分比較ツール</translation>
     </message>
     <message>
         <source>Base Schematic</source>
-        <translation>參照投影檔案</translation>
+        <translation>基準の設計図ファイル</translation>
     </message>
     <message>
         <source>Drop base .litematic here</source>
-        <translation>請拖入參照投影檔案</translation>
+        <translation>ここに基準の .litematic ファイルをドロップ</translation>
     </message>
     <message>
         <source>Target Schematic</source>
-        <translation>目標投影檔案</translation>
+        <translation>対象の設計図ファイル</translation>
     </message>
     <message>
         <source>Drop target .litematic here</source>
-        <translation>請拖入目標投影檔案</translation>
+        <translation>这里に対象の .litematic ファイルをドロップ</translation>
     </message>
     <message>
         <source>Comparison Result</source>
-        <translation>比對結果</translation>
+        <translation>比較結果</translation>
     </message>
     <message>
         <source>Total Delta: %1 blocks (%2 types changed)</source>
-        <translation>總差異：%1 個方塊（涉及 %2 種方塊類型）</translation>
+        <translation>合計差分：%1 ブロック（%2 種類のブロックが変更）</translation>
     </message>
     <message>
         <source>Parsing Error</source>
-        <translation>解析錯誤</translation>
+        <translation>解析エラー</translation>
     </message>
 </context>
 </TS>

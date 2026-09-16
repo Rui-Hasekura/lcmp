@@ -1,21 +1,38 @@
-// Copyright (C) 2026 Rui-Hasekura <ruihasekura@gmail.com>
-// SPDX-License-Identifier: GPL-3.0-only
-
+#include <QCoreApplication>
 #include <QGuiApplication>
+#include <QLocale>
 #include <QQmlApplicationEngine>
+#include <QTranslator>
 
-int main(int argc, char *argv[]) {
-    QGuiApplication app(argc, argv);
-    QQmlApplicationEngine engine;
-    QObject::connect(
-        &engine,
-        &QQmlApplicationEngine::objectCreationFailed,
-        &app,
-        []() { QCoreApplication::exit(-1); },
-        Qt::QueuedConnection
-        );
+int main(int argc, char* argv[])
+{
+  QGuiApplication app(argc, argv);
 
-    engine.loadFromModule("lcmp.gui", "Main");
+  QTranslator translator;
 
-    return app.exec();
+  const QString locale = QLocale::system().name();
+
+  const QString translationPath =
+    QCoreApplication::applicationDirPath()
+    + "/lcmp_" + locale + ".qm";
+
+  if (translator.load(translationPath)) {
+    app.installTranslator(&translator);
+  }
+
+  QQmlApplicationEngine engine;
+
+  QObject::connect(
+    &engine,
+    &QQmlApplicationEngine::objectCreationFailed,
+    &app,
+    []() {
+      QCoreApplication::exit(-1);
+    },
+    Qt::QueuedConnection
+  );
+
+  engine.loadFromModule("lcmp.gui", "Main");
+
+  return app.exec();
 }

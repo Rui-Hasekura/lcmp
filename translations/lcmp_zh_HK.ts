@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="zh_TW">
+<TS version="2.1" language="zh_HK">
 <context>
     <name>main</name>
     <message>
         <source>Litematica Material Delta Comparator</source>
-        <translation>Litematica 投影物資差異比對器</translation>
+        <translation>Litematica 藍圖物資比對器</translation>
     </message>
     <message>
         <source>Base Schematic</source>
-        <translation>參照投影檔案</translation>
+        <translation>基準藍圖檔案</translation>
     </message>
     <message>
         <source>Drop base .litematic here</source>
-        <translation>請拖入參照投影檔案</translation>
+        <translation>請拖入基準 .litematic 檔案</translation>
     </message>
     <message>
         <source>Target Schematic</source>
-        <translation>目標投影檔案</translation>
+        <translation>目標藍圖檔案</translation>
     </message>
     <message>
         <source>Drop target .litematic here</source>
-        <translation>請拖入目標投影檔案</translation>
+        <translation>請拖入目標 .litematic 檔案</translation>
     </message>
     <message>
         <source>Comparison Result</source>
