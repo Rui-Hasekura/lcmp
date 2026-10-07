@@ -8,7 +8,7 @@ It acts like `git diff` for `.litematic` files, making it easy to track block co
 
 ## Requirements
 
-- **CPU Support:** Requires x86_64 CPU with **AVX2** and **BMI2** instruction sets support.
+- **CPU Support:** Requires x86_64 CPU with **AVX2** instruction sets support.
 
 ## Features
 
